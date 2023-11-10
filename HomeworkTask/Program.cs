@@ -1,7 +1,12 @@
+using DataLayer.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add Database
+builder.Services.AddDatabase(builder.Configuration.GetConnectionString("Default"));
 
 var app = builder.Build();
 
