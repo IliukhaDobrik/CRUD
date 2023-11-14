@@ -1,0 +1,13 @@
+﻿@model List<Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 align="center">Contact List</h1>
+
+<div id="view-all">
+    @{
+        await Html.RenderPartialAsync("_ViewAll", Model);
+    }
+</div>
